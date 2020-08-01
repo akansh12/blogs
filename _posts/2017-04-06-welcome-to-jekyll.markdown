@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Updating Soon"
+title: "Updating Soon Sorry for inconvinence! Please go to https://github.com/akansh12, Thank you!"
 date: 2020-04-06 13:32:20 +0300
 description: Sorry for inconvinence! Please go to https://github.com/akansh12, Thank you! # Add post description (optional)
 <!-- img:  # Add image post (optional) -->
