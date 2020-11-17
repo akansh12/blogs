@@ -1,6 +1,6 @@
 <html lang="en"><head>
 	<meta charset="utf-8">
-	<title>Need for Robotics in Manual Scavenging and a Proposed Methodology</title>
+	<title>Need for Robotics</title>
 <link rel="stylesheet" href="subpage1main.css">
 
 <body>
@@ -10,12 +10,12 @@
       <header>
         <div class="about">
             <div class="cover-author-image">
-              <a href="/blogs/"><img src="D:\sir\main page\akansh_maurya.jpg" alt="Akansh Maurya"></a>
+              <a href="index.html" target="_self"><img src="akansh_maurya.jpg" alt="Akansh Maurya"></a>
             </div>
             <div class="author-name">Akansh Maurya</div>
-            <p>I am a student pursuing Electrical Engineering, intrested in Deep Learning, Robotics, and Control Systems.<br><a class="readmore" href="D:\sir\main page\about me\about me.html">read more</a></p>
+            <p>I am a student pursuing Electrical Engineering, intrested in Deep Learning, Robotics, and Control Systems.<br><a class="readmore" href="about me.html">read more</a></p>
             <center id="res">
-              <a href="D:\sir\main page\Aug_Akansh_resume.pdf" target="_self" class="resume">MY RESUME</a>(pdf)</center>
+              <a href="Aug_Akansh_resume.pdf" target="_self" class="resume">MY RESUME</a>(pdf)</center>
                 </div>
              </header> <!-- End Header -->
             <footer>
@@ -23,19 +23,19 @@
                 <h3 class="contact-title">Contact me</h3>
                 <div class="faconli">
                 <center>  
-                <a href="https://twitter.com/akansh_maurya" target="_blank"><img src="D:\sir\main page\twitter.png" class="iconimag3" aria-hidden="true" alt="Twitter"></a>
+                <a href="https://twitter.com/akansh_maurya" target="_blank"><img src="twitter.png" class="iconimag3" aria-hidden="true" alt="Twitter"  ></a>
                 
                 
-                  <a href="tel:+919119924860" target="_self"><img src="D:\sir\main page\contact.png" class="iconimag3" aria-hidden="true" alt="contact number"></a>
+                  <a href="tel:+919560165496" target="_self"><img src="contact.png" class="iconimag3" aria-hidden="true" alt="contact number"></a>
                 
                 
-                  <a href="http://github.com/akansh12" target="_blank"><img src="D:\sir\main page\github.png" class="iconimag3" aria-hidden="true" alt="github"></a>
+                  <a href="http://github.com/akansh12" target="_blank"><img src="github.png" class="iconimag3" aria-hidden="true" alt="github"></a>
                 
                 
-                  <a href="https://in.linkedin.com/in/akansh-maurya-246570154" target="_blank"><img src="D:\sir\main page\linkden.png" class="iconimag3" aria-hidden="true" alt="linkedin"></a>
+                  <a href="https://in.linkedin.com/in/akansh-maurya-246570154" target="_blank"><img src="linkden.png" class="iconimag3" aria-hidden="true" alt="linkedin"></a>
                 
                 
-                  <a href="mailto:akanshmaurya@gmail.com"><img class="iconimag3" src="D:\sir\main page\mail.png" alt="mail"></a>
+                  <a href="mailto:akanshmaurya@gmail.com"><img class="iconimag3" src="mail.png" alt="mail"></a>
                 </center>
                 </div>
             </section> <!-- End Section Contact -->
@@ -50,7 +50,7 @@
     
     <div class="page-cover-image">
       <figure>
-        <img class="page-image" src="D:\sir\main page\sub page 1\man.jpg" alt="How I Rest From Work">
+        <img class="page-image" src="man.jpg" alt="man">
         
       </figure>
     </div> <!-- End Page Cover Image -->
@@ -91,20 +91,20 @@
       <h2 id="plaid-ramps-kitsch-woke-pork-belly">Methodology</h2>
       <u><i>Note: Methodology I am proposing is based on my knowledge of robot designing and literature review. I thoroughly believe that modification in this approach is liable. </i></u>
       <p>Designing a manipulator arm is the heart of our problem. There are several constraints attached with this. Manholes are typically 30-45 inches in diameter, our robotic arm should be designed to enter the small hole by converging and later expanding accordingly. Manholes can be upto 15 meter in depth, so our arm should be adjustable length to serve the purpose. </p>
-      <p><img src="D:\sir\main page\sub page 1\System_architecture.png" alt="I and My friends"></p>
+      <p><img src="System_architecture.png" alt="system architecture"></p>
       <p>System architecture for this is going to be a controller and Robot. At first the robot can be a simulator and later hardware. For the controller portion we need to design a supervisory logic to calculate where we want our end effector to be. In the manipulator algorithm there is a notion of forward and inverse kinematics. Inverse kinematics is calculating a given position and orientation relative to the start of the chain. Inverse kinematics is more difficult to calculate. One of the methods to solve it is using Denavit–Hartenberg parameters approach. But this is computationally expensive compared to new machine learning optimization techniques. This paper [3], tells a deep reinforcement learning approach for dynamically stable inverse kinematics of humanoid robots. Their proposed strategy was evaluated on the upper body of a humanoid having 27 degrees of freedom. Their accuracy was about 90% after 9900 episodes. However I believe that these episodes can be reduced to lesser numbers and more accuracy can be obtained by following this paper[4], by Google Brain Team. They proposed the idea of moving robot reinforcement learning to the simulation first, because it will be more scalable and easy to operate. This was good for getting a lot of data but the model trained in the simulator tended not transfer to actual real world robots. There are a lot of systematic differences between two, one is visual appearance, other is real world physics and stimulated physics. They proposed the way to improve this by adding more randomization into the simulator. They particularly used Domain Adversarial Neural Network (DANN) to do so. Hence by combining the results from paper[3][4], we can achieve greater accuracy in less number of episodes.<br>
         The other aspect of the problem was localization and mapping. In computer geometry, simultaneously location and mapping(SLAM) is the method for construction of maps of unknown environments while also localizing itself in the environment. In a manhole, whose inside depth and width is unknown this method is appropriate to approximate the map. Below are some results of SLAM of Manhole, 
         Figure 2 & 3.  Decomposition of organic matters in sewers, manholes and pits of the drainage system will generate methane and/or hydrogen sulphide. Hydrogen sulphide, being very soluble in water, often dissolves in sewage and can be trapped within sediment and sludge in sewers as gas pockets. Entering these manholes is dangerous. That's why mapping from robot device is important[7].
         </p>
     <div class="conimg">
         <div class="conimgwrapper">
-          <div class="con1"><img src="D:\sir\main page\sub page 1\manhole_slam.png" alt="I and My friends"> <br><b></b></div>
+          <div class="con1"><img src="manhole_slam.png" alt="GeoSLAM performing mapping"> <br><b></b></div>
           <div class="icap1">
             
           </div>
         </div>
         <div class="conimgwrapper" >
-        <div class=con2><img src="D:\sir\main page\sub page 1\Slam_results.png" alt="I and My friends"><b></b></div>
+        <div class=con2><img src="Slam_results.png" alt="SLAM results"><b></b></div>
         <div class="icap2">
         </div>
       </div>
@@ -139,20 +139,74 @@
 </ol>
 </div>
 
-
+                            
       <div class="page-footer">
        
        
       </div>
+      
       <section class="comment-area">
+        <div class="comment-wrapper">
+          <div id="disqus_thread"></div>
+<script>
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+/*
+var disqus_config = function () {
+this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+var disqus_config = function () {
+          this.page.url = 'https://need-for-robotics-github-io.disqus.com/embed.js';// Replace PAGE_URL with your page's canonical URL variable
+          this.page.identifier = "akanshtyurewad"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+          };
+          
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://need-for-robotics-github-io.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+                            
+<!-- 
+           <div id="disqus_thread"></div>
+          <script>
+          
+          /**
+          *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+          *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+          
+          var disqus_config = function () {
+          this.page.url = 'https://need-for-robotics-github-io.disqus.com/embed.js';// Replace PAGE_URL with your page's canonical URL variable
+          this.page.identifier = "akanshtyurewad"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+          };
+          
+          (function() { // DON'T EDIT BELOW THIS LINE
+          var d = document, s = d.createElement('script');
+          s.src = 'https://need-for-robotics-github-io.disqus.com/embed.js';
+          s.setAttribute('data-timestamp', +new Date());
+          (d.head || d.body).appendChild(s);
+          })();
+          </script>
+          <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+           
+
+        </div> -->
    
       </section> <!-- End Comment Area -->
-
+</div>
+  </div>
 </article> <!-- End Article Page -->
 
 </div>
 
   </div>
-  <script src="https://apps.elfsight.com/p/platform.js" defer></script>
+   <script src="https://apps.elfsight.com/p/platform.js" defer></script>
   <div class="elfsight-app-91c01056-3272-4d17-af2f-8730f2244ef9"></div>
+  <script id="dsq-count-scr" src="//need-for-robotics-github-io.disqus.com/count.js" async></script>
 </body></html>
