@@ -1328,42 +1328,10 @@ footer .copyright {
   margin: 2% auto;
     width: 50%;
   }
-  .conimgwrapper{
-    width: 50%;
-  }
   .format{
       font-weight: 900;
   }
-  .con1{
-    padding-left: 1rem;
-    padding-top: 1rem;
-    float: left;
-    width: 80%;
-    box-sizing: border-box;
-    
-   
-  }
-
-  .con1 :after{
-    top:21rem;
-    content: "Figure 2: GeoSLAM performing mapping";
-  }
-  .con2{
-    padding-top: 1rem;
-    padding-right: 1rem;
-    float: right;
-    height: 70%;
-    width: 42%;
-    box-sizing: border-box;
-  }
- 
-  .con2 :after{
-    top: 21rem;
-    content: "Figure 3: SLAM results";
-   } 
-  .conimg img{
-    object-fit: contain;
-  }
+  
  
   .page-footer {
     display: -webkit-box;

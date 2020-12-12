@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Need for Robotics</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta property="og:image" content="">
+<!-- Chrome, Firefox OS and Opera -->
+<meta name="theme-color" content="#263959">
+<!-- Windows Phone -->
+<meta name="msapplication-navbutton-color" content="#263959">
+<!-- iOS Safari -->
+<meta name="apple-mobile-web-app-status-bar-style" content="#263959">
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css?family=PT+Serif:400,700|Lato:300,400,700&display=swap" rel="stylesheet">
+<!-- Font Awesome -->
+<link rel="stylesheet" href="/flexible-jekyll/assets/fonts/font-awesome/css/font-awesome.min.css">
+<!-- Styles -->
+	<link rel="stylesheet" href="subpage1main.css">
+</head>
+
+<body>
+
+  <div class="wrapper">
+    <aside class="sidebar">
+        <header>
+          <div class="about">
+              <div class="cover-author-image">
+                <a href="index.html" target="_self"><img src="akansh_maurya.jpg" alt="Akansh Maurya"></a>
+              </div>
+              <div class="author-name">Akansh Maurya</div>
+              <p>I am a student pursuing Electrical Engineering, intrested in Deep Learning, Robotics, and Control Systems.<br><a class="readmore" href="about me.html">read more</a></p>
+              <center id="res">
+                <a href="Aug_Akansh_resume.pdf" target="_self" class="resume">MY RESUME</a>(pdf)</center>
+                  </div>
+               </header> <!-- End Header -->
+              <footer>
+                <section class="contact">
+                  <h3 class="contact-title">Contact me</h3>
+                  <div class="faconli">
+                  <center>  
+                  <a href="https://twitter.com/akansh_maurya" target="_blank"><img src="twitter.png" class="iconimag3" aria-hidden="true" alt="Twitter"  ></a>
+                  
+                  
+                    <a href="tel:+919560165496" target="_self"><img src="contact.png" class="iconimag3" aria-hidden="true" alt="contact number"></a>
+                  
+                  
+                    <a href="http://github.com/akansh12" target="_blank"><img src="github.png" class="iconimag3" aria-hidden="true" alt="github"></a>
+                  
+                  
+                    <a href="https://in.linkedin.com/in/akansh-maurya-246570154" target="_blank"><img src="linkden.png" class="iconimag3" aria-hidden="true" alt="linkedin"></a>
+                  
+                  
+                    <a href="mailto:akanshmaurya@gmail.com"><img class="iconimag3" src="mail.png" alt="mail"></a>
+                  </center>
+                  </div>
+              </section> <!-- End Section Contact -->
+                <div class="copyright">
+                  <p>2020 © Akansh Maurya</p>
+                </div>
+              </footer> <!-- End Footer -->
+            </aside> <!-- End Sidebar -->
+<div class="content-box clearfix">
+  <article class="article-page">
+  <div class="page-content">
+    
+    <div class="page-cover-image">
+      <figure>
+        <img class="page-image" src="man.jpg" alt="man">
+        
+      </figure>
+    </div> <!-- End Page Cover Image -->
+    
+    <div class="wrap-content">
+        <header class="header-page">
+          <h1 class="page-title">Need for Robotics in Manual Scavenging and a Proposed Methodology</h1>
+          <div class="page-date"><span>2020, Oct 23&nbsp;&nbsp;&nbsp;&nbsp;</span></div>
+          </header>
+
+
+
+          <p>
+            A deadly practice of Manual scavenging is common in South Asian countries. Manual Scavenging refers to manually cleaning, carrying, disposing human waste from septic tanks, sewers and dry latrines. In India alone 1.8 million people are forced to engage in these activities because of socio-economic reasons. Thousands of scavengers are dying around the world while doing so, out of which manhole scavenging is worse. My research topic focuses on creating a low cost efficient robot manipulator and its peripherals so that we can replace humans. Further the research methodologies gained from this project can be used in other projects of Ocean water cleaning, underwater navigation and manoeuvring robots in difficult terrain. 
+          </p>
+          <p><span class="def">Keywords: </span>Robotics manipulators, Reinforcement learning, Deep learning, SLAM </p>
+
+          <h2 id="plaid-ramps-kitsch-woke-pork-belly">Research objectives</h2>
+          <p>
+            The existing Manhole cleaning process requires to manually position the sewer rods, sewer jetting machine into the manhole to clean sewer lines[1]. But these machines are not effective in cleaning the lower part of the manholes which have Hard rocks, Sand, Silt, Sludge, Non-Biodegradable wastes, etc. Because of the ineffectiveness of these methods a worker needs to enter a manhole, which is filled with toxic gases and infected liquid waste to open blockage. Things became worse during the time of COVID-19[2]. 
+          </p>
+          <p>The research project can be broken down into these main tasks:</p>
+      <ul>
+        <li>Robotic manipulator with enough degree of freedom and length to pick up the waste from the bottom of manholes.</li>
+        <li>
+          Water resistant and dust proof body. Also the body should be made up of lighter, stronger material which is corrosion free. 
+        </li>
+        <li>
+          Computer vision using a camera, which can operate in dark conditions.
+        </li>
+        <li>
+          AI techniques to collect and process data and can navigate inside manholes.
+        </li>
+        <li>
+          Detection and alert for harmful and toxic gases released during fragmentation of waste.
+        </li>
+        <li>
+          A GUI in multiple languages so people of different countries can operate this robot.
+        </li>
+      </ul>
+
+      <h2 id="plaid-ramps-kitsch-woke-pork-belly">Methodology</h2>
+      <u><i>Note: Methodology I am proposing is based on my knowledge of robot designing and literature review. I thoroughly believe that modification in this approach is liable. </i></u>
+      <p>Designing a manipulator arm is the heart of our problem. There are several constraints attached with this. Manholes are typically 30-45 inches in diameter, our robotic arm should be designed to enter the small hole by converging and later expanding accordingly. Manholes can be upto 15 meter in depth, so our arm should be adjustable length to serve the purpose. </p>
+      
+      <div class="imgs"><img src="System_architecture.png" alt="system architecture">
+        <center><b>Figure 1: System Architecture</b></center></div>
+
+      <p>System architecture for this is going to be a controller and Robot. At first the robot can be a simulator and later hardware. For the controller portion we need to design a supervisory logic to calculate where we want our end effector to be. In the manipulator algorithm there is a notion of forward and inverse kinematics. Inverse kinematics is calculating a given position and orientation relative to the start of the chain. Inverse kinematics is more difficult to calculate. One of the methods to solve it is using Denavit–Hartenberg parameters approach. But this is computationally expensive compared to new machine learning optimization techniques. This paper [3], tells a deep reinforcement learning approach for dynamically stable inverse kinematics of humanoid robots. Their proposed strategy was evaluated on the upper body of a humanoid having 27 degrees of freedom. Their accuracy was about 90% after 9900 episodes. However I believe that these episodes can be reduced to lesser numbers and more accuracy can be obtained by following this paper[4], by Google Brain Team. They proposed the idea of moving robot reinforcement learning to the simulation first, because it will be more scalable and easy to operate. This was good for getting a lot of data but the model trained in the simulator tended not transfer to actual real world robots. There are a lot of systematic differences between two, one is visual appearance, other is real world physics and stimulated physics. They proposed the way to improve this by adding more randomization into the simulator. They particularly used Domain Adversarial Neural Network (DANN) to do so. Hence by combining the results from paper[3][4], we can achieve greater accuracy in less number of episodes.<br>
+        The other aspect of the problem was localization and mapping. In computer geometry, simultaneously location and mapping(SLAM) is the method for construction of maps of unknown environments while also localizing itself in the environment. In a manhole, whose inside depth and width is unknown this method is appropriate to approximate the map. Below are some results of SLAM of Manhole, 
+        Figure 2 & 3.  Decomposition of organic matters in sewers, manholes and pits of the drainage system will generate methane and/or hydrogen sulphide. Hydrogen sulphide, being very soluble in water, often dissolves in sewage and can be trapped within sediment and sludge in sewers as gas pockets. Entering these manholes is dangerous. That's why mapping from robot device is important[7].
+        </p>
+
+
+
+          <div class="comb">
+          <div><img src="manhole_slam.png" alt="GeoSLAM performing mapping">
+        <center><b>Figure 2: GeoSLAM performing mapping</b></center></div>
+        
+        <div><img src="Slam_results.png" alt="SLAM results">
+            <center><b>Figure 3: SLAM results</b></center></div>
+          </div>
+          <div>        <p>This paper[5] proposes Deep-Learning Enhanced Visual SLAM System based on Deep Local Features(DFSLAM), paper proposes a method that outperforms popular traditional SLAM systems in various scenes, including challenging scenes with intense illumination changes. Its versatility and mobility fit well into the need for exploring new environments. However I feel that due to the dark, absence of light condition, this paper[6], which proposes autonomous navigation and mapping for inspecting inside tunnels is more relevant.<br>
+            Above mentioned objective requires more rigorous research than others. Detecting the presence of gas inside can be easily done by sensors. Transforming the whole research into a product requires ease of use for workers. Graphical user interface, available in different languages to be used by different developing nations. A lot of inspiration for this methodology is derived from Bandicoot, a product by Genrobotics, which is the world's first manhole cleaning robot. However its cost is around 2,873,390 japanese yen and it is not autonomous, requiring a presence of an engineer who can operate it thus adding more cost to it. Our approach to use reinforcement learning will definitely be a breakthrough in reducing the cost.     
+             </p>
+             <h2 id="plaid-ramps-kitsch-woke-pork-belly">Expected outcomes:</h2>
+             <ul>
+               <li>A product that will have a huge market value, because of its need in developing nations. Also this will prove yet again that technology can be used for upliftment of underprivileged who suffer from the stigma of manhole cleaning.</li>
+               <li>
+                Research in creating a robotics manipulator which is based on reinforcement learning and deep learning will serve as a contribution to the research community and practitioners.
+               </li>
+             </ul>
+  <h2 id="plaid-ramps-kitsch-woke-pork-belly">References:</h2>
+  <ol>
+    <li>
+      Breaking Free: Rehabilitating Manual Scavengers :<br>https://in.one.un.org/page/breaking-free-rehabilitating-manual-scavengers/
+    </li>
+    <li>
+      COVID-19: The environmental implications of shedding SARS-CoV-2 in human faeces by Richard S. Quilliam, Manfred Weidmann, Vanessa Moresco, Heather Purshouse, Zoe O'Hara, David M. Oliver.
+    </li>
+    <li>
+      A Deep Reinforcement Learning Approach for Dynamically Stable Inverse Kinematics of Humanoid Robots by S Phaniteja, Parijat Dewangan, Pooja Guhan, Abhishek Sarkar, K Madhava Krishna
+    </li>
+    <li>Using Simulation and Domain Adaptation to Improve Efficiency of Deep Robotic Grasping by K. Bousmalis, A. Irpan, P. Wohlhart, Y. Bai, M, Kelcey, M. Kalakrishnan, L. Downs, J. Ibarz, P. Pastor, K. Konolige, S. Levine, V. Vanhoucke</li>
+    <li>DF-SLAM: A Deep-Learning Enhanced Visual SLAM System based on Deep Local Features by Rong Kang, Jieqi Shi, Xueming Li, Yang Liu, Xiao Liu</li>
+    <li>Autonomous Navigation and Mapping for Inspection of Penstocks and Tunnels with MAVs by Tolga Özaslan , Giuseppe Loianno, James Keller, Camillo J. Taylor, and Vijay Kumar, Jennifer M. Wozencraft, and Thomas Hood</li>
+    <li>GeoSLAM: https://geoslam.com </li>
+    <li>Figure1 is taken from the MATLAB’s website. </li>
+  </ol>
+  </div>    
+ 
+      <div class="page-footer">
+
+      </div>
+      <section class="comment-area">
+  <div class="comment-wrapper">
+    
+    <div id="disqus_thread"></div>
+    <script>
+        var disqus_config = function () {
+          this.page.url = 'https://need-for-robotics-github-io.disqus.com/embed.js';// Replace PAGE_URL with your page's canonical URL variable
+          this.page.identifier = "akanshtyurewad"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+          };
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://need-for-robotics-github-io.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    
+  </div>
+</section> <!-- End Comment Area -->
+
+    </div> <!-- End Wrap Content -->
+    
+  </div> <!-- End Page Content -->
+</article> <!-- End Article Page -->
+
+</div>
+
+  </div>
+  
+  <script src="https://apps.elfsight.com/p/platform.js" defer></script>
+  <script id="dsq-count-scr" src="//need-for-robotics-github-io.disqus.com/count.js" async></script>
+  <div class="elfsight-app-91c01056-3272-4d17-af2f-8730f2244ef9"></div>
+  
+</body>
+</html>
