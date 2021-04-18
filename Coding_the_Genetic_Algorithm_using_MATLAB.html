@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Coding the Genetic Algorithm using MATLAB</title>
+  <link rel="shortcut icon" type="image" href="../Images/akansh_maurya.jpg">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta property="og:image" content="">
+  <!-- Chrome, Firefox OS and Opera -->
+  <meta name="theme-color" content="#263959">
+  <!-- Windows Phone -->
+  <meta name="msapplication-navbutton-color" content="#263959">
+  <!-- iOS Safari -->
+  <meta name="apple-mobile-web-app-status-bar-style" content="#263959">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=PT+Serif:400,700|Lato:300,400,700&display=swap" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="/flexible-jekyll/assets/fonts/font-awesome/css/font-awesome.min.css">
+  <!-- Styles -->
+  <link rel="stylesheet" href="../Css/subpage3.css">
+</head>
+
+<body>
+  <div class="wrapper">
+    <aside class="sidebar">
+      <header>
+        <div class="about">
+          <div class="cover-author-image">
+            <a href="index.html" target="_self"><img src="../Images/akansh_maurya.jpg" alt="Akansh Maurya"></a>
+          </div>
+          <div class="author-name">Akansh Maurya</div>
+          <p>I am a student pursuing Electrical Engineering, intrested in Deep Learning, Robotics, and Control
+            Systems.<br><a class="readmore" href="about me.html">read more</a></p>
+          <center id="res">
+            <a href="Aug_Akansh_resume.pdf" target="_self" class="resume">MY RESUME</a>(pdf)
+          </center>
+        </div>
+      </header> <!-- End Header -->
+      <footer>
+        <section class="contact">
+          <h3 class="contact-title">Contact me</h3>
+          <div class="faconli">
+            <ul>
+              <li> <a href="https://twitter.com/akansh_maurya" target="_blank"><img src="../Images/twitter.png"
+                    class="iconimag3" aria-hidden="true" alt="Twitter"></a></li>
+
+
+              <li><a href="tel:+919560165496" target="_self"><img src="../Images/contact.png" class="iconimag3"
+                    aria-hidden="true" alt="contact number"></a></li>
+
+
+              <li><a href="http://github.com/akansh12" target="_blank"><img src="../Images/github.png" class="iconimag3"
+                    aria-hidden="true" alt="github"></a></li>
+
+
+              <li><a href="https://in.linkedin.com/in/akansh-maurya-246570154" target="_blank"><img
+                    src="../Images/linkden.png" class="iconimag3" aria-hidden="true" alt="linkedin"></a></li>
+
+
+              <li><a href="mailto:akanshmaurya@gmail.com"><img class="iconimag3" src="../Images/mail.png"
+                    alt="mail"></a></li>
+
+            </ul>
+          </div>
+        </section> <!-- End Section Contact -->
+        <div class="copyright">
+          <p>2020 © Akansh Maurya</p>
+        </div>
+      </footer> <!-- End Footer -->
+    </aside> <!-- End Sidebar -->
+    <div class="content-box clearfix">
+      <article class="article-page">
+        <div class="page-content">
+
+          <div class="page-cover-image">
+            <figure>
+              <img class="page-image" src="../Images/coding_the_generic/thumbnail_genetic.png" alt="thumbnail_genetic">
+
+            </figure>
+          </div> <!-- End Page Cover Image -->
+
+          <div class="wrap-content">
+            <header class="header-page">
+              <h1 class="page-title">Coding the Genetic Algorithm using MATLAB</h1>
+              <h3 id="plaid-ramps-kitsch-woke-pork-belly">Guided by Dr. Nitin Anand Srivastava <br>
+                (Institute of Engineering and Technology, Lucknow)
+              </h3>
+              <div class="page-date"><span>2020, Dec 8&nbsp;&nbsp;&nbsp;&nbsp;</span></div>
+            </header>
+            <h3 id="plaid-ramps-kitsch-woke-pork-belly">Abstract</h3>
+            <p>In computer science and operations research, a genetic algorithm (GA) is a metaheuristic inspired by the
+              process of natural selection that belongs to the larger class of evolutionary algorithms (EA). Genetic
+              algorithms are commonly used to generate high-quality solutions to optimization and search problems by
+              relying on bio-inspired operators such as mutation, crossover, and selection. John Holland introduced
+              genetic algorithms in 1960 based on the concept of Darwin’s theory of evolution; afterward, his student
+              David E. Goldberg extended GA in 1989.
+            </p>
+            <h3 id="plaid-ramps-kitsch-woke-pork-belly">Introduction</h3>
+            <p>
+              <span class="format">An optimization </span>is an important tool in making decisions and in analyzing
+              physical systems. In mathematical terms, an <span class="format">optimization </span>problem is a problem
+              of finding the best solution from among the set of all feasible solutions. Genetic Algorithms (GA) are the
+              heuristic search and optimization techniques that mimic the process of natural evolution.<br>
+              An Example: Giraffes evolving long necks.
+            <ul>
+              <li>Giraffes with slightly longer necks could feed on leaves of higher branches when all lower ones had
+                been eaten off.</li>
+              <li>They had a better chance of survival.</li>
+              <li>Favorable characteristics propagated through generations of giraffes.</li>
+              <li>Now, evolved species have long necks.</li>
+            </ul>
+            </p>
+            <div class="comb">
+              <div><img src="../Images/coding_the_generic/figure_1.jpeg"
+                  alt="Optimization is finding the global minima of the function">
+                <center><b>Figure 1: Optimization is finding the global minima of the function</b></center>
+              </div>
+
+              <div><img src="../Images/coding_the_generic/figure_2.png" alt="Flow diagram of evolution in Nature">
+                <center><b>Figure 2: Flow diagram of evolution in Nature</b></center>
+              </div>
+            </div>
+            <h2 id="plaid-ramps-kitsch-woke-pork-belly"> GA Operators and Parameters</h2>
+            <p>
+            <ul>
+              <li>Selection</li>
+              <li>Crossover</li>
+              <li>Mutation</li>
+              <li>Elitism</li>
+            </ul>
+            </p>
+            <h3 id="plaid-ramps-kitsch-woke-pork-belly">Selection:</h3>
+            <p>A fitness function value quantifies the optimality of a solution. The value is used to rank a particular
+              solution against all the other solutions. A fitness value is assigned to each solution depending on how
+              close it is actually to the optimal solution of the problem.</p>
+
+            <h3 id="plaid-ramps-kitsch-woke-pork-belly">Crossover:</h3>
+            <p>The crossover operator is used to create new solutions from the existing solutions available in the
+              mating pool after applying the selection operator. This operator exchanges the gene information between
+              the solutions in the mating pool. The most popular crossover selects any two solutions strings randomly
+              from the mating pool and some portion of the strings is exchanged between the strings.</p>
+
+            <h3 id="plaid-ramps-kitsch-woke-pork-belly">Mutation:</h3>
+            <p>The mutation is the occasional introduction of new features into the solution strings of the population
+              pool to maintain diversity in the population. Though crossover has the main responsibility to search for
+              the optimal solution, the mutation is also used for this purpose. The mutation operator changes a 1 to 0
+              or vice versa, with a mutation probability of 0.1 or near. The mutation probability is generally kept low
+              for steady convergence. A high value of mutation probability would search here and there like a random
+              search technique.</p>
+
+            <h3 id="plaid-ramps-kitsch-woke-pork-belly">Elitism:</h3>
+            <p>Elitism is the preservation of the few best solutions for the population pool.</p>
+            <div class="imgs"><img src="../Images/coding_the_generic/figure_3.png"
+                alt="Analogy between Nature and Generic Algorithm">
+              <center><b>Figure 3: Analogy between Nature and Generic Algorithm</b></center>
+            </div>
+
+            <h2 id="plaid-ramps-kitsch-woke-pork-belly">Coding the Genetic Algorithm</h2>
+            <h3 id="plaid-ramps-kitsch-woke-pork-belly">General method:</h3>
+            <pre>
+    function ga()
+{
+Initialize population;
+Calculate the fitness function;
+While(fitness value != termination criteria)
+{
+Selection;
+Crossover; Mutation;
+Calculate the fitness function;
+}
+}
+</pre>
+            <h3 id="plaid-ramps-kitsch-woke-pork-belly">Problem Statement: </h3>
+            <!-- <h4 id="plaid-ramps-kitsch-woke-pork-belly">Problem Statement: </h4> -->
+            <div><a href="../Images/coding_the_generic/figure_4.png" target="_self"><img class="problem"
+                  src="../Images/coding_the_generic/figure_4.png" alt="Problem Statement"></a>
+              <center><b>Figure 4: Problem Statement</b></center>
+            </div>
+            <p>
+              <span class="format">Solution: </span><a
+                href="https://github.com/akansh12/Genetic-Algorithim-using-MATLAB">
+                https://github.com/akansh12/Genetic-Algorithim-using-MATLAB</a>
+            </p>
+            <h3 id="plaid-ramps-kitsch-woke-pork-belly">Problem Definition:</h3>
+
+            <div class="imgs"><img src="../Images/coding_the_generic/figure_5.png" alt="Defining Problem">
+              <center><b>Figure 5: Defining Problem </b></center>
+            </div>
+            <p><b>Note: </b>Selection is done in the main Script.</p>
+
+            <h3 id="plaid-ramps-kitsch-woke-pork-belly">Crossover:</h3>
+
+            <div class="imgs"><img src="../Images/coding_the_generic/figure_6.png" alt="Single point Crossover">
+              <center><b>Figure 6: Single point Crossover</b></center>
+            </div>
+
+            <h3 id="plaid-ramps-kitsch-woke-pork-belly">Mutation:</h3>
+
+
+            <div class="imgs"><img src="../Images/coding_the_generic/figure_7.png"
+                alt="Adding mutation to avoid local minima">
+              <center><b>Figure 7: Adding mutation to avoid local minima</b></center>
+            </div>
+
+            <h3 id="plaid-ramps-kitsch-woke-pork-belly">Elitism:</h3>
+
+            <div class="imgs"><img src="../Images/coding_the_generic/figure_8.png"
+                alt="Performing Elitism to save good solutions">
+              <center><b>Figure 8: Performing Elitism to save good solutions</b></center>
+            </div>
+
+            <h2 id="plaid-ramps-kitsch-woke-pork-belly">Results: </h2>
+            <p>
+              Number of genes: 10<br>
+              Number of iteration: 100<br>
+              Crossover Probability: 0.8<br>
+              Mutation Probability: 0.1
+            </p>
+
+            <div class="imgs"><img src="../Images/coding_the_generic/figure_9.png"
+                alt="X-Axis: No. of Iterations, Y-Axis: Cost of Function">
+              <center><b> Figure 9: X-Axis: No. of Iterations, Y-Axis: Cost of Function</b></center>
+            </div>
+            <p>X1 and X2 respectively shown below: </p>
+
+
+            <div><img src="../Images/coding_the_generic/figure_10.png" alt="results"></div>
+
+
+            <div class="page-footer">
+
+            </div>
+            <section class="comment-area">
+              <div class="comment-wrapper">
+
+                <div id="disqus_thread"></div>
+                <script>
+                  var disqus_config = function () {
+                    this.page.url = 'https://coding-the-genetic-algorithm-using-matlab.disqus.com/embed.js';// Replace PAGE_URL with your page's canonical URL variable
+                    this.page.identifier = "AkanshMaurya"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                  };
+                  (function () { // DON'T EDIT BELOW THIS LINE
+                    var d = document, s = d.createElement('script');
+                    s.src = 'https://coding-the-genetic-algorithm-using-matlab.disqus.com/embed.js';
+                    s.setAttribute('data-timestamp', +new Date());
+                    (d.head || d.body).appendChild(s);
+                  })();
+                </script>
+                <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments
+                    powered by Disqus.</a></noscript>
+
+              </div>
+            </section> <!-- End Comment Area -->
+
+          </div> <!-- End Wrap Content -->
+
+        </div> <!-- End Page Content -->
+      </article> <!-- End Article Page -->
+
+    </div>
+
+  </div>
+
+  <script src="https://apps.elfsight.com/p/platform.js" defer></script>
+  <script id="dsq-count-scr" src="//need-for-robotics-github-io.disqus.com/count.js" async></script>
+  <div class="elfsight-app-91c01056-3272-4d17-af2f-8730f2244ef9"></div>
+
+</body>
+
+</html>

@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Verifying_and_Validating_College_ID_Images</title>
+  <link rel="shortcut icon" type="image" href="../Images/akansh_maurya.jpg">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta property="og:image" content="">
+  <!-- Chrome, Firefox OS and Opera -->
+  <meta name="theme-color" content="#263959">
+  <!-- Windows Phone -->
+  <meta name="msapplication-navbutton-color" content="#263959">
+  <!-- iOS Safari -->
+  <meta name="apple-mobile-web-app-status-bar-style" content="#263959">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=PT+Serif:400,700|Lato:300,400,700&display=swap" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="/flexible-jekyll/assets/fonts/font-awesome/css/font-awesome.min.css">
+  <!-- Styles -->
+  <link rel="stylesheet" href="../Css/subpage1main.css">
+</head>
+
+<body>
+  <div class="wrapper">
+    <aside class="sidebar">
+      <header>
+        <div class="about">
+          <div class="cover-author-image">
+            <a href="index.html" target="_self"><img src="../Images/akansh_maurya.jpg" alt="Akansh Maurya"></a>
+          </div>
+          <div class="author-name">Akansh Maurya</div>
+          <p>I am a student pursuing Electrical Engineering, intrested in Deep Learning, Robotics, and Control
+            Systems.<br><a class="readmore" href="about me.html">read more</a></p>
+          <center id="res">
+            <a href="Aug_Akansh_resume.pdf" target="_self" class="resume">MY RESUME</a>(pdf)
+          </center>
+        </div>
+      </header> <!-- End Header -->
+      <footer>
+        <section class="contact">
+          <h3 class="contact-title">Contact me</h3>
+          <div class="faconli">
+            <ul>
+              <li> <a href="https://twitter.com/akansh_maurya" target="_blank"><img src="../Images/twitter.png"
+                    class="iconimag3" aria-hidden="true" alt="Twitter"></a></li>
+
+
+              <li><a href="tel:+919560165496" target="_self"><img src="../Images/contact.png" class="iconimag3"
+                    aria-hidden="true" alt="contact number"></a></li>
+
+
+              <li><a href="http://github.com/akansh12" target="_blank"><img src="../Images/github.png" class="iconimag3"
+                    aria-hidden="true" alt="github"></a></li>
+
+
+              <li><a href="https://in.linkedin.com/in/akansh-maurya-246570154" target="_blank"><img
+                    src="../Images/linkden.png" class="iconimag3" aria-hidden="true" alt="linkedin"></a></li>
+
+
+              <li><a href="mailto:akanshmaurya@gmail.com"><img class="iconimag3" src="../Images/mail.png"
+                    alt="mail"></a></li>
+
+            </ul>
+          </div>
+        </section> <!-- End Section Contact -->
+        <div class="copyright">
+          <p>2020 © Akansh Maurya</p>
+        </div>
+      </footer> <!-- End Footer -->
+    </aside> <!-- End Sidebar -->
+    <div class="content-box clearfix">
+      <article class="article-page">
+        <div class="page-content">
+
+          <!-- <div class="page-cover-image">
+      <figure>
+        <img class="page-image" src="1.png" alt="header">
+        
+      </figure>
+    </div>   -->
+          <!-- End Page Cover Image  -->
+
+          <div class="wrap-content">
+            <header class="header-page">
+              <h1 class="page-title">Verifying and Validating College ID Images</h1>
+
+              <div class="page-date"><span>2020, Dec 9&nbsp;&nbsp;&nbsp;&nbsp;</span></div>
+            </header>
+            <h4 id="plaid-ramps-kitsch-woke-pork-belly">Akansh Maurya Amith P Sudhanshu Dubey <br>
+              Mentor Name: Prof. Kavi Arya, Omkar Manjrekar, Andrea F<br>
+              Duration of Internship: 08/05/2020−27/06/2020
+            </h4>
+            <p>** I cannot share much about the pipeline and procedure because our paper is under review. </p>
+
+
+            <div class="imgs"><img src="../Images/verifing_and_validating/figure_1.png" alt="Cover page">
+              <center><b>Figure 1: Cover page</b></center>
+            </div>
+
+            <h2 id="plaid-ramps-kitsch-woke-pork-belly">Abstract</h2>
+            <p>E-yantra organizes various competitions and MOOCs for students across India. The staff spends a
+              significant amount of time validating ID cards uploaded by eYRC, eYIC and MOOCs participants. Through this
+              project we present an efficient system to verify and validate college ID cards. Our approach is to
+              identify valid college ID cards from a pool of images which may contain other photos too. This is done by
+              a deep image classification model. To extract the textual information from the image we performed text
+              detection and text recognition. We explored different models, evaluated their speed and accuracy for our
+              dataset. Validation of ID card, matching of results of OCR to the ground truth, is done by a custom
+              algorithm which uses partial string matching and fuzzy-set. Also to improve accuracy of our system we have
+              performed some Image processing techniques of which one was to correct the orientation of Image
+              automatically before passing through our classification and OCR model.
+            </p>
+
+            <div class="imgs"><img src="../Images/verifing_and_validating/figure_2.png" alt="Problem Definition">
+              <center><b>Figure 2 :Problem Definition</b></center>
+            </div>
+
+
+            <h2 id="plaid-ramps-kitsch-woke-pork-belly">Overview of pipeline</h2>
+
+            <div class="imgs"><img src="../Images/verifing_and_validating/figure_3.png" alt="Pipeline">
+              <center><b>Figure 3: Pipeline</b></center>
+            </div>
+
+            <p>The pipeline for this project consists of four-part. A classification model, that can verify the correct
+              College ID card image from the pool of images. Before passing the Images to the text detection and
+              recognition model, we corrected the image orientation by passing through the Rotate-Net model. The last
+              stage of the pipeline was to match the OCR results from the ground truth to validate an ID card, this was
+              done by the custom algorithm with fuzzy string matching. In the subsequent sections, we have compared
+              different deep learning models, evaluated them on our dataset, and selected the appropriate to achieve
+              maximum efficiency.</p>
+
+            <h2 id="plaid-ramps-kitsch-woke-pork-belly">Data exploration</h2>
+
+            <p>To build the model pipeline and define the problem statement more transparently it was important to
+              introspect the image data we have and measure the variation. As a dataset we started with around 2000
+              images of which 1800 were valid college ID cards. The rest 200 images consist of aadhaar cards, pan cards,
+              passport size photo and other random images. Most of the images in our dataset were clicked by mobile
+              camera, thus some images were blur, low resolution, presence of background noise and randomly oriented.
+              Many of them were end to end cropped, but it was estimated that only around 2-3 percent of images have
+              background noise. It was estimated that around 8 percent of images were oriented at different angle</p>
+            <div class="imgs"><img src="../Images/verifing_and_validating/figure_4.png" alt="Data Distribution">
+              <center><b>Figure 4: Data Distribution</b></center>
+            </div>
+            <h2 id="plaid-ramps-kitsch-woke-pork-belly">Classification Model</h2>
+
+            <p>Every college has a unique ID card format. Some of the college ID cards were of shape, height ratio
+              width, 2:5, others were 5:2. Each college ID card was having a different color, different logos, in some
+              information was typed others were handwritten. This variation of image data made our classification
+              problem more complex.<br>
+              However there were few features that humans can identify, every ID card was rectangular in shape, had a
+              passport size photo of the candidate present inside the ID card, also some textual information like Name,
+              Roll No., College/University Name was present. Now our task was to segregate these images. On the other
+              side, non-ID cards have some pattern associated with them, aadhaar cards have a lot of similar features
+              like the presence of Indian emblem, Indian flag colored strips, QR code, etc. So was the case for PAN
+              cards.<br>
+              So we made our classification model with four classes, College ID cards, Aadhaar Cards, PAN cards, and
+              others. Others include those images which rarely occur in the dataset, mainly selfies, backgrounds, photos
+              of faces, etc.
+            </p>
+            <div class="imgs"><img src="../Images/verifing_and_validating/figure_5.png" alt="Classification Task">
+              <center><b>Figure 5: Classification Task</b></center>
+            </div>
+
+            <h2 id="plaid-ramps-kitsch-woke-pork-belly">Rotate-Net</h2>
+            <p>We have seen that around 10 percent of images in our dataset were in the wrong orientation, specifically
+              for our case they were orientated. ResNet model requires images to be of size 224X224X3. We resized images
+              and also normalized them according to the mean and standard deviation of ImageNet Data set. We trained our
+              model to thirty epochs using Adam optimizer with learning rate of 0.0001 and categorical cross-entropy
+              loss function. With this we got accuracy of 91 percent on our validation set. To improve our accuracy we
+              made few changes in our dataset.Every ID card has a passport size photo of the student. If we try to
+              correct the orientation of faces present in the ID card, eventually we will correct the ID card
+              orientation. So in our dataset we introduced the images of faces available in the open-source data
+              repository. Our hypothesis was that extracting features of faces is easier than the text data present.</p>
+
+            <div class="imgs"><img src="../Images/verifing_and_validating/figure_6.png" alt="Rotate-Net">
+              <center><b>Figure 6: Rotate-Net</b></center>
+            </div>
+
+            <h2 id="plaid-ramps-kitsch-woke-pork-belly">Text detection and Recognition</h2>
+
+
+            <div class="imgs"><img src="../Images/verifing_and_validating/figure_7.png" alt="Comparison between OCR">
+              <center><b>Figure 7: Comparison between OCR</b></center>
+            </div>
+
+            <h2 id="plaid-ramps-kitsch-woke-pork-belly">Results of OCR</h2>
+
+            <div class="imgs"><img src="../Images/verifing_and_validating/figure_8.png"
+                alt="Text detection and Recognition">
+              <center><b>Figure 8: Text detection and Recognition</b></center>
+            </div>
+
+            <h2 id="plaid-ramps-kitsch-woke-pork-belly">Fuzzy String Matching</h2>
+
+            <p>The word fuzzy means something that is difficult to understand and explain precisely. In the context of
+              string matching, fuzzy string matching implies imprecise or approximate string matching. Thus, rather than
+              a strict true or false, fuzzy string matching would tell how similar are the two given strings.<br>
+              In this project, we have employed fuzzy string matching to match the text recognised from the ID card to
+              the information given by students while registering. The reasons for using fuzzy string matching rather
+              than an exact string matching are as follow:
+              <br>
+              The text recognition model isn't 100% reliable and so it may make mistakes. An exact string matching
+              would fail in this scenario, while the fuzzy one would give some score of similarity
+            <ul>
+              <li>Students may enter information which is logically the same as that on their ID card but is not
+                literally the same. As an example, students often interchange "Engineering" with "Engg." and vice versa.
+                They are not the exact same string but have the same meaning.</li>
+              <li>Thus, using fuzzy string matching makes this ID card validation robust and close to the real world.
+              </li>
+            </ul>
+            </p>
+            <div class="imgs"><img src="../Images/verifing_and_validating/figure_9.png"
+                alt="Fuzzy Set Matching Results">
+              <center><b>Figure 9: Fuzzy Set Matching Results</b></center>
+            </div>
+
+            <h2 id="plaid-ramps-kitsch-woke-pork-belly">Credits:</h2>
+            <div class="imgs"><img src="../Images/verifing_and_validating/figure_10.png" alt="Credits"></div>
+
+            <div class="page-footer">
+
+            </div>
+            <section class="comment-area">
+              <div class="comment-wrapper">
+
+                <div id="disqus_thread"></div>
+                <script>
+                  var disqus_config = function () {
+                    this.page.url = 'https://verifying-and-validating-college-id-images.disqus.com/embed.js';// Replace PAGE_URL with your page's canonical URL variable
+                    this.page.identifier = "akanshmaurya"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                  };
+                  (function () { // DON'T EDIT BELOW THIS LINE
+                    var d = document, s = d.createElement('script');
+                    s.src = 'https://verifying-and-validating-college-id-images.disqus.com/embed.js';
+                    s.setAttribute('data-timestamp', +new Date());
+                    (d.head || d.body).appendChild(s);
+                  })();
+                </script>
+                <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments
+                    powered by Disqus.</a></noscript>
+
+              </div>
+            </section> <!-- End Comment Area -->
+
+          </div> <!-- End Wrap Content -->
+
+        </div> <!-- End Page Content -->
+      </article> <!-- End Article Page -->
+
+    </div>
+
+  </div>
+
+  <script src="https://apps.elfsight.com/p/platform.js" defer></script>
+  <script id="dsq-count-scr" src="//need-for-robotics-github-io.disqus.com/count.js" async></script>
+  <div class="elfsight-app-91c01056-3272-4d17-af2f-8730f2244ef9"></div>
+
+</body>
+
+</html>

@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Fovea Localization for Age-related Macular degeneration (AMD) and
+        Non-AMD Patients</title>
+    <link rel="shortcut icon" type="image" href="../Images/akansh_maurya.jpg">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta property="og:image" content="">
+    <!-- Chrome, Firefox OS and Opera -->
+    <meta name="theme-color" content="#263959">
+    <!-- Windows Phone -->
+    <meta name="msapplication-navbutton-color" content="#263959">
+    <!-- iOS Safari -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="#263959">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=PT+Serif:400,700|Lato:300,400,700&display=swap"
+        rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="/flexible-jekyll/assets/fonts/font-awesome/css/font-awesome.min.css">
+    <!-- Styles -->
+    <link rel="stylesheet" href="../Css/subpage2.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <aside class="sidebar">
+            <header>
+                <div class="about">
+                    <div class="cover-author-image">
+                        <a href="index.html" target="_self"><img src="../Images/akansh_maurya.jpg"
+                                alt="Akansh Maurya"></a>
+                    </div>
+                    <div class="author-name">Akansh Maurya</div>
+                    <p>I am a student pursuing Electrical Engineering, intrested in Deep Learning, Robotics, and Control
+                        Systems.<br><a class="readmore" href="about me.html">read more</a></p>
+                    <center id="res">
+                        <a href="Aug_Akansh_resume.pdf" target="_self" class="resume">MY RESUME</a>(pdf)
+                    </center>
+                </div>
+            </header> <!-- End Header -->
+            <footer>
+                <section class="contact">
+                    <h3 class="contact-title">Contact me</h3>
+                    <div class="faconli">
+                        <ul>
+                            <li> <a href="https://twitter.com/akansh_maurya" target="_blank"><img
+                                        src="../Images/twitter.png" class="iconimag3" aria-hidden="true"
+                                        alt="Twitter"></a></li>
+
+
+                            <li><a href="tel:+919560165496" target="_self"><img src="../Images/contact.png"
+                                        class="iconimag3" aria-hidden="true" alt="contact number"></a></li>
+
+
+                            <li><a href="http://github.com/akansh12" target="_blank"><img src="../Images/github.png"
+                                        class="iconimag3" aria-hidden="true" alt="github"></a></li>
+
+
+                            <li><a href="https://in.linkedin.com/in/akansh-maurya-246570154" target="_blank"><img
+                                        src="../Images/linkden.png" class="iconimag3" aria-hidden="true"
+                                        alt="linkedin"></a></li>
+
+
+                            <li><a href="mailto:akanshmaurya@gmail.com"><img class="iconimag3" src="../Images/mail.png"
+                                        alt="mail"></a></li>
+
+                        </ul>
+                    </div>
+                </section> <!-- End Section Contact -->
+                <div class="copyright">
+                    <p>2020 © Akansh Maurya</p>
+                </div>
+            </footer> <!-- End Footer -->
+        </aside> <!-- End Sidebar -->
+        <div class="content-box clearfix">
+            <article class="article-page">
+                <div class="page-content">
+
+                    <!-- End Page Cover Image  -->
+
+                    <div class="wrap-content">
+                        <header class="header-page">
+                            <h1 class="page-title">Fovea Localization for Age-related Macular degeneration (AMD) and
+                                Non-AMD Patients</h1>
+
+                            <div class="page-date"><span>2021, Apr 9&nbsp;&nbsp;&nbsp;&nbsp;</span></div>
+                        </header>
+
+                        <p>This blog presents the solution to the ADAM challenge hosted by the
+                            <a href="https://grand-challenge.org">https://grand-challenge.org</a>. The ADAM challenge
+                            focuses on the investigation and development
+                            of algorithms associated with the diagnosis of Age-related Macular degeneration (AMD)
+                            and
+                            segmentation of lesions in fundus photos from AMD patients. In this blog we focus on the
+                            subtask of the problem, that is localization of Fovea. The fovea centralis is a small,
+                            central pit composed of closely packed cones in the eye. It is located in the center of
+                            the
+                            macula lutea of the retina.[1]
+                            The fovea is responsible for sharp central vision (also called foveal vision), which is
+                            necessary in humans for activities for which visual detail is of primary importance,
+                            such as
+                            reading and driving. The fovea is surrounded by the parafovea belt and the perifovea
+                            outer
+                            region.[2]
+                        </p>
+
+
+                        <div class="imgs"><img src="../Images/grand_challenge/figure_1.png"
+                                alt="Location of Fovea for Non-AMD">
+                            <center><b>Figure 1: Location of Fovea for Non-AMD</b></center>
+                        </div>
+
+                        <!-- <h2 id="plaid-ramps-kitsch-woke-pork-belly">Abstract</h2> -->
+                        <p>Code can be found here: <a href="https://bit.ly/2OZ8uer"> https://bit.ly/2OZ8uer</a><br />
+                            More about the competition:
+                            <a href="https://amd.grand-challenge.org/Home/">https://amd.grand-challenge.org/Home/</a>
+                            <br /><br />
+                            We wil, explore the following:
+                        <ul>
+                            <li>Exploratory data analysis</li>
+                            <li>Data transformation for object detection</li>
+                            <li>Creating custom datasets</li>
+                            <li>Creating the model</li>
+                            <li>Defining the loss, optimizer, and IOU metric</li>
+                            <li>Training and evaluation of the model</li>
+                            <li>Deploying the model</li>
+                        </ul>
+                        </p>
+                        <h3 id="plaid-ramps-kitsch-woke-pork-belly">Exploratory data analysis</h3>
+                        <p>In the dataset, there is a CSV file which has three columns where first column tells the name
+                            of the image file, second and third represents x, y coordinate of Fovea’s center. There are
+                            311 Non-AMD patients while 89 are AMD. </p>
+
+                        <div class="imgs"><img src="../Images/grand_challenge/figure_2.png" alt="X, Y coordinate of Fovea’s center for different classes"/>
+                            <center><b>Figure 2 :X, Y coordinate of Fovea’s center for different classes.
+                                </b></center>
+                        </div>
+
+                        <p>
+                            Original size of the image for height varies from 1400 to 2200 and the width ranges from
+                            1400 to 2400 pixels.
+                        </p>
+                        <div class="imgs"><img src="../Images/grand_challenge/figure_3.png" alt="A look into Dataset with image size">
+                            <center><b>Figure 3: A look into Dataset with image size</b></center>
+                        </div>
+                        <h3 id="plaid-ramps-kitsch-woke-pork-belly">Data Transformation and Augmentation [Results only]
+                        </h3>
+
+                        <p>Data augmentation and transformation is a critical step in training deep learning
+                            algorithms, especially for small datasets. The iChallenge-AMD dataset in this chapter has
+                            only 400 images, which is considered a small dataset. As a reminder, we will later split 20
+                            percent of this dataset for evaluation purposes. Since the images have different sizes, we
+                            need to resize all images to a pre-determined size. Then, we can utilize a variety of
+                            augmentation techniques, such as horizontal flipping, vertical flipping, and translation, to
+                            expand our dataset during training.
+                        </p>
+
+                        <ul>
+                            <li>
+                                <h4>Image Resizing:</h4>
+                                <ul>
+                                    <li type="square">We will resize the image to (256, 256). We also have to scale the
+                                        labels in
+                                        the same ratio. Refer to the code link.</li>
+                                    <div class="imgs"><img src="../Images/grand_challenge/figure_4.png"
+                                            alt="Image Resizing">
+                                        <center><b>Figure 4: Image Resizing </b></center>
+                                    </div>
+                                </ul>
+                            </li>
+                            <li>
+                                <h4>Random Vertical Fliping </h4>
+                                <div class="imgs"><img src="../Images/grand_challenge/figure_5.png"
+                                        alt="Vertical Flip">
+                                    <center><b>Figure 5: Vertical Flip</b></center>
+                                </div>
+                            </li>
+                            <li>
+                                <h4>Random Horizontal Fliping</h4>
+
+                                <div class="imgs"><img src="../Images/grand_challenge/figure_6.png"
+                                        alt="Horizontal Flip">
+                                    <center><b>Figure 6: Horizontal Flip</b></center>
+                                </div>
+                            </li>
+                            <li>
+                                <h4>Random Shifting</h4>
+
+                                <div class="imgs"><img src="../Images/grand_challenge/figure_7.png"
+                                        alt="Random Shifting">
+                                    <center><b>Figure 7: Random Shifting
+                                        </b></center>
+                                </div>
+                            </li>
+                        </ul>
+                        <h3 id="plaid-ramps-kitsch-woke-pork-belly">Creating Model: </h3>
+
+                        <div class="imgs"><img src="../Images/grand_challenge/figure_8.png" alt="Model Architechture">
+                            <center><b>Figure 8: Model Architechture
+                                </b></center>
+                        </div>
+                        <p>The code snippet shoes the implementation: </p>
+                        <div class="imgs"><a href="../Images/grand_challenge/figure_9.png"><img
+                                    src="../Images/grand_challenge/figure_9.png" alt="Model implementation" /></a>
+                            <center><b>Figure 9: Model implementation
+                                </b></center>
+                        </div>
+
+
+                        <h3 id="plaid-ramps-kitsch-woke-pork-belly">The loss, optimizer, and IOU metric:</h3>
+                        <p>
+                        <ul>
+                            <li>Loss Curve
+                                <div class="imgs"><img src="../Images/grand_challenge/figure_10.png"
+                                        alt="Loss Curve">
+                                    <center><b>Figure 10: Loss Curve
+                                        </b></center>
+                                </div>
+                            </li>
+
+                            <li>Accuracy Curve
+                                <div class="imgs"><img src="../Images/grand_challenge/figure_11.png"
+                                        alt="Data Distribution">
+                                    <center><b>Accuracy Curve
+                                        </b></center>
+                                </div>
+                            </li>
+
+
+                            <li>IOU Metric as label in the figure.
+
+                                <div class="imgs"><img src="../Images/grand_challenge/figure_12.png"
+                                        alt="Data Distribution">
+                                    <center><b>IOU
+                                        </b></center>
+                                </div>
+                            </li>
+                        </ul>
+
+
+                        </p>
+                        <h3 id="plaid-ramps-kitsch-woke-pork-belly">References:</h3>
+                        <p>
+                        <ul>
+                            <!-- <li><a href="https://en.wikipedia.org/wiki/Fovea_centralis"
+                                    style="word-break: break-all;">https://en.wikipedia.org/wiki/Fovea_centralis</a>
+                            </li> -->
+                            <li><a href="https://en.wikipedia.org/wiki/Fovea_centralis" style="word-break: break-all;">
+                                    https://en.wikipedia.org/wiki/Fovea_centralis</a> </li>
+                            <li><a href="https://amd.grand-challenge.org/Home/" style="word-break: break-all;">
+                                    https://amd.grand-challenge.org/Home/ </a>
+                            </li>
+                            <li> <a href="https://github.com/akansh12/Computer_vision_Book_solution/blob/main/Michael%20Avendi%20-%20PyTorch%20Computer%20Vision%20Cookbook_%20Over%2070%20recipes%20to%20solve%20computer%20vision%20and%20image%20processing%20problems%20using%20PyTorch%201.x-Packt%20Publishing%20(2020).pdf"
+                                    style="word-break: break-all;">
+                                    https://github.com/akansh12/Computer_vision_Book_solution/blob/main/Michael%20Avendi%20-%20PyTorch%20Computer%20Vision%20Cookbook_%20Over%2070%20recipes%20to%20solve%20computer%20vision%20and%20image%20processing%20problems%20using%20PyTorch%201.x-Packt%20Publishing%20(2020).pdf</a>
+                            </li>
+                        </ul>
+                        </p>
+
+                        <div class="page-footer">
+
+                        </div>
+                        <section class="comment-area">
+                            <div class="comment-wrapper">
+
+                                <div id="disqus_thread"></div>
+                                <script>
+                                    var disqus_config = function () {
+                                        this.page.url = 'https://verifying-and-validating-college-id-images.disqus.com/embed.js';// Replace PAGE_URL with your page's canonical URL variable
+                                        this.page.identifier = "akanshmaurya"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                                    };
+                                    (function () { // DON'T EDIT BELOW THIS LINE
+                                        var d = document, s = d.createElement('script');
+                                        s.src = 'https://verifying-and-validating-college-id-images.disqus.com/embed.js';
+                                        s.setAttribute('data-timestamp', +new Date());
+                                        (d.head || d.body).appendChild(s);
+                                    })();
+                                </script>
+                                <noscript>Please enable JavaScript to view the <a
+                                        href="https://disqus.com/?ref_noscript">comments
+                                        powered by Disqus.</a></noscript>
+
+                            </div>
+                        </section> <!-- End Comment Area -->
+
+                    </div> <!-- End Wrap Content -->
+
+                </div> <!-- End Page Content -->
+            </article> <!-- End Article Page -->
+
+        </div>
+
+    </div>
+
+    <script src="https://apps.elfsight.com/p/platform.js" defer></script>
+    <script id="dsq-count-scr" src="//need-for-robotics-github-io.disqus.com/count.js" async></script>
+    <div class="elfsight-app-91c01056-3272-4d17-af2f-8730f2244ef9"></div>
+
+</body>
+
+</html>
